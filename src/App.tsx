@@ -52,7 +52,7 @@ type LocaleText = {
   grantItems: TimelineItem[];
   visitItems: TimelineItem[];
   quickLinks: string[];
-  externalLinks: string[];
+  externalLinks: PaperLink[];
 };
 
 export default function App() {
@@ -540,7 +540,11 @@ export default function App() {
           },
         ],
         quickLinks: ["研究を見る", "論文を見る", "講演を見る", "講義情報を見る", "CVを見る"],
-        externalLinks: ["researchmap", "Google Scholar", "大学ページ"],
+       externalLinks: [
+  { label: "researchmap", url: "https://researchmap.jp/aya-ishizeki" },
+  { label: "Google Scholar", url: "https://scholar.google.com/citations?user=uDeaq1IAAAAJ" },
+  { label: "University page", url: "https://www.rimath.saitama-u.ac.jp/staff/" },
+],
       };
     }
 
@@ -842,16 +846,19 @@ export default function App() {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3 text-sm text-neutral-600">
-            {t.externalLinks.map((label: string) => (
-              <span
-                key={label}
-                className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 hover:border-pink-200"
-              >
-                {label}
-              </span>
-            ))}
+  {t.externalLinks.map((link: PaperLink) => (
+    <a
+      key={link.label}
+      href={link.url}
+      target="_blank"
+      rel="noreferrer"
+      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 hover:border-pink-200"
+    >
+      {link.label}
+    </a>
+  ))}
+</div>
           </div>
-        </div>
 
         <aside className="space-y-5">
           <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
