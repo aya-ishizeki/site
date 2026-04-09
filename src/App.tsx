@@ -543,7 +543,7 @@ export default function App() {
        externalLinks: [
   { label: "researchmap", url: "https://researchmap.jp/aya-ishizeki" },
   { label: "Google Scholar", url: "https://scholar.google.com/citations?user=uDeaq1IAAAAJ" },
-  { label: "University page", url: "https://www.rimath.saitama-u.ac.jp/staff/" },
+  { label: "教員紹介ページ", url: "https://www.rimath.saitama-u.ac.jp/staff/aishizeki/" },
 ],
       };
     }
@@ -730,7 +730,11 @@ export default function App() {
         },
       ],
       quickLinks: ["Research", "Papers", "Talks", "Teaching", "CV"],
-      externalLinks: ["researchmap", "Google Scholar", "University page"],
+     externalLinks: [
+  { label: "researchmap", url: "https://researchmap.jp/aya-ishizeki" },
+  { label: "Google Scholar", url: "https://scholar.google.com/citations?user=uDeaq1IAAAAJ" },
+  { label: "University page", url: "https://www.rimath.saitama-u.ac.jp/staff/aishizeki/" },
+],
     };
   }, [lang]);
 
