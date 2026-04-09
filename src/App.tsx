@@ -378,7 +378,7 @@ export default function App() {
           "メビウス・エネルギー，結び目エネルギー，幾何解析，非線形解析，偏微分方程式，変分公式，第二変分，勾配流",
         researchTitle: "研究概要",
         researchBody:
-          "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、ならびにそれに付随する勾配流を研究しています。とくにメビウス・エネルギーを中心に、分解定理を手がかりとして、非局所的に定義される幾何量の中から局所的な楕円型・放物型構造がどのように現れるかを調べています。最近は、第二変分の主要項が局所的な4階楕円型作用素として現れることや、そのことが勾配流の解析にどのような意味を持つかに関心があります。",
+          "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、ならびにそれに付随する勾配流を研究しています。とくにメビウス・エネルギーを中心に、分解定理を手がかりとして、非局所的に定義される幾何量の中から局所的な楕円型・放物型構造がどのように現れるかを調べています。",
         currentThemes: "現在の関心",
         researchSubsections: [
           {
@@ -410,11 +410,11 @@ export default function App() {
           "結び目エネルギーの勾配流",
         ],
         papersTitle: "論文",
-        papersLead: "査読論文・プレプリント・掲載決定論文をここにまとめる想定です。",
+        papersLead: "",
         talksTitle: "講演",
-        talksLead: "講演・セミナー発表を年ごとに整理して掲載する想定です。",
+        talksLead: "",
         teachingTitle: "講義情報",
-        teachingLead: "担当講義・演習を年度ごとに整理して掲載する想定です。",
+        teachingLead: "",
         teachingItems: [
           { text: "解析概論A演習（埼玉大学，2026年度 第1・第2ターム）", url: "https://webclass.gks.saitama-u.ac.jp/" },
           { text: "解析学序論（埼玉大学，2026年度 第1・第2ターム）", url: "https://webclass.gks.saitama-u.ac.jp/" },
@@ -425,7 +425,7 @@ export default function App() {
         education: "学位・学歴",
         grants: "研究助成",
         visits: "海外研究滞在",
-        cvNote: "公開版では、このページに業績一覧、研究滞在、受賞などを追加できます。",
+        cvNote: "",
         positionsItems: [
           {
             date: "2015年4月 – 2016年3月",
