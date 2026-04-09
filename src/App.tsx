@@ -55,7 +55,7 @@ type LocaleText = {
   externalLinks: string[];
 };
 
-export default function AcademicSitePreview() {
+export default function App() {
   const [page, setPage] = useState("home");
   const [lang, setLang] = useState<"jp" | "en">("jp");
 
@@ -157,7 +157,7 @@ export default function AcademicSitePreview() {
         "A. Ishizeki & T. Nagasawa, Möbius energies for multi-component-links, and their Möbius-invariant decompositions, to appear in Kyushu J. Math.",
       meta: "",
       venue: lang === "jp" ? "受理済み・近刊" : "Accepted / forthcoming",
-      links: [{ label: lang === "jp" ? "to appear" : "to appear", url: "https://www2.math.kyushu-u.ac.jp/~kjm/to_appear.html" }],
+      links: [{ label: "to appear", url: "https://www2.math.kyushu-u.ac.jp/~kjm/to_appear.html" }],
     },
     {
       category: "accepted",
@@ -706,7 +706,7 @@ export default function AcademicSitePreview() {
         },
         {
           date: "Aug 2015",
-          text: "Universität Salzburg, オーストリア",
+          text: "Universität Salzburg, Austria",
           subtext: "Collaborative research meeting",
         },
         {
@@ -716,12 +716,12 @@ export default function AcademicSitePreview() {
         },
         {
           date: "Nov 2016",
-          text: "Universität Salzburg, オーストリア",
+          text: "Universität Salzburg, Austria",
           subtext: "Collaborative research meeting",
         },
         {
           date: "Dec 2018",
-          text: "Universität Salzburg, オーストリア",
+          text: "Universität Salzburg, Austria",
           subtext: "Collaborative research",
         },
       ],

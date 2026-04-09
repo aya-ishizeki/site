@@ -1,18 +1,12 @@
-# Aya Ishizeki site template
+# Aya Ishizeki site (GitHub Actions version)
 
-## まずやること
-1. この zip を解凍する
-2. `src/App.tsx` を開く
-3. ChatGPT キャンバスの完成版サイトコードで **丸ごと置き換える**
-4. 必要なら `vite.config.ts` の `base: "/site/"` を、GitHub の repository name に合わせて直す
+このセットは、PC に Node.js を入れずに GitHub 側で build / deploy するためのものです。
 
-## その後
-```bash
-npm install
-npm run build
-npm run deploy
-```
+## 使い方
+1. 既存のファイルをこの内容で上書きアップロード
+2. GitHub の Settings → Pages → Build and deployment で Source を `GitHub Actions` にする
+3. main に push されると自動で公開される
 
 ## メモ
-- GitHub の repository name を `site` にしたなら、`base: "/site/"` のままでOK
-- まだ公開前に確認したいときは `npm run dev`
+- repository name が `site` なので `vite.config.ts` の base は `/site/`
+- 公開URLは通常 `https://aya-ishizeki.github.io/site/`
