@@ -599,11 +599,11 @@ export default function App() {
         "Gradient flows for knot energies",
       ],
       papersTitle: "Papers",
-      papersLead: "This page is intended to list published papers, accepted papers, and preprints.",
+      papersLead: "",
       talksTitle: "Talks",
-      talksLead: "This page is intended to list talks and seminar presentations in reverse chronological order by year.",
+      talksLead: "",
       teachingTitle: "Teaching",
-      teachingLead: "This page is intended to list courses and recitations by academic year.",
+      teachingLead: "",
       teachingItems: [
         { text: "Recitation in Calculus A (Saitama University, AY 2026, Terms 1-2)", url: "https://webclass.gks.saitama-u.ac.jp/" },
         { text: "Introduction to Analysis (Saitama University, AY 2026, Terms 1-2)", url: "https://webclass.gks.saitama-u.ac.jp/" },
@@ -615,7 +615,7 @@ export default function App() {
       grants: "Research Funding",
       visits: "International Research Visits",
       cvNote:
-        "The published version can later include publications, research visits, and awards on this page.",
+        "",
       positionsItems: [
         {
           date: "Apr 2015 – Mar 2016",
