@@ -610,7 +610,7 @@ export default function App() {
         { text: "Recitation in Calculus B (Saitama University, AY 2026, Terms 3-4)", url: "https://webclass.gks.saitama-u.ac.jp/" },
       ],
       cvTitle: "Curriculum Vitae",
-      positions: "Appointments",
+      positions: "Employment",
       education: "Degree and Education",
       grants: "Research Funding",
       visits: "International Research Visits",
