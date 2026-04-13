@@ -380,6 +380,7 @@ export default function App() {
         researchBody:
         "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、ならびにそれに付随する勾配流を研究しています。とくにメビウス・エネルギーは、結び目の自己交差を防ぎつつ、その幾何学的複雑さを測る量として導入され、メビウス変換に対する不変性をもつことから、幾何学的にも解析的にも豊かな構造を備えています。私の研究では、このエネルギーの分解定理を手がかりとして変分構造を精密に解析し、第二変分に現れる支配的な寄与や適切な coercivity 評価を明らかにすることで、非局所的に定義されたエネルギーから局所的な偏微分方程式的構造がどのように現れるかを調べています。こうした視点から、勾配流を偏微分方程式として理解するための枠組みの構築を目指しています。",
         currentThemes: "現在の関心",
+        researchSubsections: [],
         relatedLinksTitle: "関連リンク",
         relatedLinks: [
           { text: "Jun O'Hara", url: "https://sites.google.com/site/junohara/home?authuser=0" },
@@ -889,15 +890,17 @@ export default function App() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-8">
-          {t.researchSubsections.map((section: ResearchSubsection) => (
-            <div key={section.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-4 h-1.5 w-10 rounded-full bg-pink-100" />
-              <h3 className="text-lg font-semibold text-slate-950">{section.title}</h3>
-              <p className="mt-3 leading-7 text-neutral-700">{section.body}</p>
-            </div>
-          ))}
-        </div>
+    {t.researchSubsections.length > 0 && (
+  <div className="grid md:grid-cols-2 gap-8 mt-8">
+    {t.researchSubsections.map((section: ResearchSubsection) => (
+      <div key={section.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="mb-4 h-1.5 w-10 rounded-full bg-pink-100" />
+        <h3 className="text-lg font-semibold text-slate-950">{section.title}</h3>
+        <p className="mt-3 leading-7 text-neutral-700">{section.body}</p>
+      </div>
+    ))}
+  </div>
+)}
 
         <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="mb-4 h-1.5 w-10 rounded-full bg-pink-100" />
