@@ -546,25 +546,14 @@ export default function App() {
         "Möbius energy, knot energies, geometric analysis, nonlinear analysis, partial differential equations, variational formulas, second variation, gradient flows",
       researchTitle: "Research",
       researchBody:
-        "My research concerns geometric energies for knots and links, their analytic structure, variational formulas, and associated gradient flows. In particular, I study how invariant decompositions of Möbius energy reveal local elliptic or parabolic structures hidden inside a nonlocal geometric functional. More recently, I have been interested in how the principal part of the second variation appears as a local fourth-order elliptic operator and how this viewpoint contributes to the study of gradient flows.",
+  "My research concerns geometric energies for knots and links, including their analytic structure, " +
+  "variational formulas, and associated gradient flows. In particular, I study Möbius energy through " +
+  "its invariant decompositions in order to understand how local elliptic and parabolic structures " +
+  "arise within a nonlocal geometric functional. A recent focus of my work is the appearance of the " +
+  "principal part of the second variation as a local fourth-order elliptic operator, and its role in " +
+  "the analysis of the corresponding gradient flow.",
       currentThemes: "Current themes",
-      researchSubsections: [
-        {
-          title: "Background",
-          body:
-            "Knot energies introduced by O'Hara have been studied as geometric functionals that penalize self-intersections while measuring the geometric complexity of knots. Among them, Möbius energy is particularly notable for its invariance under Möbius transformations and its rich geometric and analytic structure.",
-        },
-        {
-          title: "Main focus",
-          body:
-            "My recent work centers on knot energies, especially Möbius energy, with emphasis on invariant decompositions, second variation, and gradient flows. A recurring theme is how local structure emerges from a nonlocal functional.",
-        },
-        {
-          title: "Analytic viewpoint",
-          body:
-            "By identifying the principal part through decomposition, I study elliptic structure and coercivity, and use this perspective to better understand the parabolic nature of the associated gradient flow.",
-        },
-      ],
+      researchSubsections: [],
       relatedLinksTitle: "Related Links",
       relatedLinks: [
         { text: "Jun O'Hara", url: "https://sites.google.com/site/junohara/home?authuser=0" },
@@ -876,19 +865,6 @@ export default function App() {
             <p className="leading-8 text-neutral-700">{t.researchBody}</p>
           </div>
         </div>
-
-    {t.researchSubsections.length > 0 && (
-  <div className="grid md:grid-cols-2 gap-8 mt-8">
-    {t.researchSubsections.map((section: ResearchSubsection) => (
-      <div key={section.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <div className="mb-4 h-1.5 w-10 rounded-full bg-pink-100" />
-        <h3 className="text-lg font-semibold text-slate-950">{section.title}</h3>
-        <p className="mt-3 leading-7 text-neutral-700">{section.body}</p>
-      </div>
-    ))}
-  </div>
-)}
-
         <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="mb-4 h-1.5 w-10 rounded-full bg-pink-100" />
           <h3 className="text-lg font-semibold text-slate-950">{t.relatedLinksTitle}</h3>
