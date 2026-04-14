@@ -378,7 +378,7 @@ export default function App() {
           "メビウス・エネルギー，結び目エネルギー，幾何解析，非線形解析，偏微分方程式，変分公式，第二変分，勾配流",
         researchTitle: "研究概要",
         researchBody:
-        "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、ならびにそれに付随する勾配流を研究しています。とくにメビウス・エネルギーは、結び目の自己交差を防ぎつつ、その幾何学的複雑さを測る量として導入され、メビウス変換に対する不変性をもつことから、幾何学的にも解析的にも豊かな構造を備えています。私の研究では、このエネルギーの分解定理を手がかりとして変分構造を精密に解析し、第二変分に現れる支配的な寄与や適切な coercivity 評価を明らかにすることで、非局所的に定義されたエネルギーから局所的な偏微分方程式的構造がどのように現れるかを調べています。こうした視点から、勾配流を偏微分方程式として理解するための枠組みの構築を目指しています。",
+        "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、およびそれに付随する勾配流を研究しています。位相幾何学の対象である結び目に「エネルギー」を与えてその形を数値化することで、連続変形で移り合う結び目の中でどの形が最も安定であるか、すなわちエネルギーを最小にする形は何か、またそのような形が実現されるか、といった問題を考えます。とくに、メビウス不変性をもつエネルギーはメビウス・エネルギーと呼ばれ、幾何学と解析学の両面から興味深い研究対象となっています。このエネルギーは、荷電した結び目の静電エネルギーに着想を得て導入されたものですが、その解析を通して、幾何学的意味をもつ分解構造が現れることを、長澤壯之先生（埼玉大学）との共同研究により見いだしました。さらに、この分解定理を手がかりとして、変分構造の精密な解析を行うとともに、絡み目に対するエネルギーの再定義とそのメビウス不変分解も与えています。現在は、第二変分の主要項の構造や coercivity 評価を明らかにすることで、非局所的に定義されたエネルギーから局所的な偏微分方程式的構造がどのように現れるかを調べています。これにより、勾配流を偏微分方程式として理解するための理論的枠組みの構築を目指しています。",
         currentThemes: "現在の関心",
         researchSubsections: [],
         relatedLinksTitle: "関連リンク",
@@ -387,12 +387,7 @@ export default function App() {
           { text: "Simon Blatt", url: "https://simon-blatt.github.io/" },
           { text: "Takeyuki Nagasawa", url: "https://www.saitama-u.ac.jp/sci/math/lab/nagasawa/index.html" },
         ],
-        themes: [
-          "メビウス・エネルギーの分解定理",
-          "第二変分",
-          "coercivity と短時間存在への応用",
-          "結び目エネルギーの勾配流",
-        ],
+        themes: [        ],
         papersTitle: "論文",
         papersLead: "",
         talksTitle: "講演",
@@ -876,17 +871,9 @@ export default function App() {
     return (
       <section>
         <SectionHeader label="Research" title={t.researchTitle} />
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="mt-8">
           <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
             <p className="leading-8 text-neutral-700">{t.researchBody}</p>
-          </div>
-          <div className="rounded-3xl bg-slate-50 p-7 border border-slate-200 shadow-sm">
-            <h3 className="text-base font-semibold text-slate-900">{t.currentThemes}</h3>
-            <ul className="mt-4 space-y-3 text-neutral-700 leading-7 list-disc pl-5">
-              {t.themes.map((theme: string) => (
-                <li key={theme}>{theme}</li>
-              ))}
-            </ul>
           </div>
         </div>
 
