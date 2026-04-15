@@ -378,7 +378,7 @@ export default function App() {
           "メビウス・エネルギー，結び目エネルギー，幾何解析，非線形解析，偏微分方程式，変分公式，第二変分，勾配流",
         researchTitle: "研究概要",
         researchBody:
-        "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、およびそれに付随する勾配流を研究しています。位相幾何学の対象である結び目に「エネルギー」を与えてその形を数値化することで、連続変形で移り合う結び目の中でどの形が最も安定であるか、すなわちエネルギーを最小にする形は何か、またそのような形が実現されるか、といった問題を考えます。とくに、メビウス不変性をもつエネルギーはメビウス・エネルギーと呼ばれ、幾何学と解析学の両面から興味深い研究対象となっています。このエネルギーは、荷電した結び目の静電エネルギーに着想を得て導入されたものですが、その解析を通して、幾何学的意味をもつ分解構造が現れることを、長澤壯之先生（埼玉大学）との共同研究により見いだしました。さらに、この分解定理を手がかりとして、変分構造の精密な解析を行うとともに、絡み目に対するエネルギーの再定義とそのメビウス不変分解も与えています。現在は、第二変分の主要項の構造や coercivity 評価を明らかにすることで、非局所的に定義されたエネルギーから局所的な偏微分方程式的構造がどのように現れるかを調べています。これにより、勾配流を偏微分方程式として理解するための理論的枠組みの構築を目指しています。",
+        "結び目や絡み目に対して定義されるエネルギー汎関数の構造解析、変分公式、およびそれに付随する勾配流を研究しています。位相幾何学の対象である結び目に「エネルギー」を与えてその形を数値化することで、連続変形で移り合う結び目の中でどの形が最も安定であるか、すなわちエネルギーを最小にする形は何か、またそのような形が実現されるか、といった問題を考えます。とくに、メビウス不変性をもつエネルギーはメビウス・エネルギーと呼ばれ、幾何学と解析学の両面から興味深い研究対象となっています。このエネルギーは、1991年に今井淳氏によって、荷電した結び目の静電エネルギーに着想を得て導入されたものですが、その解析を通して、幾何学的意味をもつ分解構造が現れることを、長澤壯之先生（埼玉大学）との共同研究により見いだしました。さらに、この分解定理を手がかりとして、変分構造の精密な解析を行うとともに、絡み目に対するエネルギーの再定義とそのメビウス不変分解も与えています。現在は、第二変分の主要項の構造や coercivity 評価を明らかにすることで、非局所的に定義されたエネルギーから局所的な偏微分方程式的構造がどのように現れるかを調べています。これにより、勾配流を偏微分方程式として理解するための理論的枠組みの構築を目指しています。",
         currentThemes: "現在の関心",
         researchSubsections: [],
         relatedLinksTitle: "関連リンク",
@@ -545,13 +545,17 @@ export default function App() {
       keywordValue:
         "Möbius energy, knot energies, geometric analysis, nonlinear analysis, partial differential equations, variational formulas, second variation, gradient flows",
       researchTitle: "Research",
-      researchBody:
-  "My research concerns geometric energies for knots and links, including their analytic structure, " +
-  "variational formulas, and associated gradient flows. In particular, I study Möbius energy through " +
-  "its invariant decompositions in order to understand how local elliptic and parabolic structures " +
-  "arise within a nonlocal geometric functional. A recent focus of my work is the appearance of the " +
-  "principal part of the second variation as a local fourth-order elliptic operator, and its role in " +
-  "the analysis of the corresponding gradient flow.",
+  researchBody:
+  "My research concerns the analytic structure, variational formulas, and associated gradient flows of energy functionals defined for knots and links. " +
+  "By assigning an \"energy\" to a knot, which is an object of topology, and thereby quantifying its shape, one can ask which shape is the most stable " +
+  "among all knots related by continuous deformations; in other words, which shape minimizes the energy, and whether such a minimizer is actually realized. " +
+  "Among such functionals, those that are invariant under Mobius transformations are called Mobius energies, and they provide an interesting subject of study " +
+  "from both geometric and analytic viewpoints. This energy was originally introduced by O'Hara in 1991 from the idea of the electrostatic energy of a charged knot. " +
+  "In joint work with Takeyuki Nagasawa (Saitama University), I found that its analysis reveals a decomposition structure with geometric meaning. " +
+  "Building on this decomposition theorem, I further study the variational structure in detail, and have also given a reformulation of the energy for links together " +
+  "with its Mobius-invariant decomposition. My current work focuses on clarifying the structure of the principal part of the second variation and establishing coercivity estimates, " +
+  "in order to understand how local PDE structure emerges from a nonlocally defined energy. Through this, I aim to develop a theoretical framework for understanding " +
+  "the associated gradient flow as a partial differential equation.",
       currentThemes: "Current themes",
       researchSubsections: [],
       relatedLinksTitle: "Related Links",
