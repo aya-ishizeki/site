@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 type NavItem = { key: string; en: string; jp: string };
 type PaperLink = { label: string; url: string };
 type PaperItem = {
-  category: "thesis" | "refereed" | "accepted" | "submitted";
+  category: "preprint" | "accepted" | "refereed" | "thesis";
   year: string;
   title: string;
   meta: string;
@@ -70,85 +70,12 @@ export default function App() {
 
   const papers: PaperItem[] = [
     {
-      category: "thesis",
-      year: "2016",
-      title: "Decomposition of the Mobius energy: the Mobius invariance and variational formulae of decomposed energies",
-      meta:
-        lang === "jp"
-          ? "博士（理学）（埼玉大学）・取得年月日 2016年3月24日"
-          : "Ph.D. in Science, Saitama University, March 24, 2016",
-      venue: lang === "jp" ? "学位論文" : "Thesis",
-    },
-    {
-      category: "refereed",
-      year: "2014",
+      category: "preprint",
+      year: "2026",
       title:
-        "A. Ishizeki & T. Nagasawa, A decomposition theorem of the Möbius energy I: Decomposition and Möbius invariance, Kodai Math. J. 37 (3), 737-754, 2014.",
+        "A. Ishizeki, Exact Hessian Cancellation and Quartic Nondegeneracy at the Round Circle, preprint, 2026.",
       meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.2996/kmj/1414674619" }],
-    },
-    {
-      category: "refereed",
-      year: "2015",
-      title:
-        "A. Ishizeki & T. Nagasawa, A decomposition theorem of the Möbius energy II: variational formulae and estimates, Math. Ann. 363 (1-2), 617-635, 2015.",
-      meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.1007/s00208-015-1175-2" }],
-    },
-    {
-      category: "refereed",
-      year: "2016",
-      title:
-        "A. Ishizeki & T. Nagasawa, The invariance of decomposed Möbius energies under inversions with center on curves, J. Knot Theory Ramifications 25 (2), 1650009, 22 pp., 2016.",
-      meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.1142/S0218216516500097" }],
-    },
-    {
-      category: "refereed",
-      year: "2016",
-      title:
-        "A. Ishizeki & T. Nagasawa, The L2-gradient of decomposed Möbius energies, Calc. Var. Partial Differential Equations 55 (3), Art. 56, 31 pp., 2016.",
-      meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.1007/s00526-016-0993-8" }],
-    },
-    {
-      category: "refereed",
-      year: "2021",
-      title:
-        "A. Ishizeki & T. Nagasawa, Upper and lower bounds and modulus of continuity of decomposed Möbius energies, J. Geom. Anal. 31, 5659-5686, 2021.",
-      meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.1007/s12220-020-00496-x" }],
-    },
-    {
-      category: "refereed",
-      year: "2021",
-      title:
-        "A. Ishizeki & T. Nagasawa, Decomposition of generalized O'Hara's energies, Math. Z. 298, 1049-1076, 2021.",
-      meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.1007/s00209-020-02601-w" }],
-    },
-    {
-      category: "refereed",
-      year: "2022",
-      title:
-        "S. Blatt, A. Ishizeki & T. Nagasawa, A Möbius invariant discretization of O'Hara's Möbius energy, J. Knot Theory Ramifications 31 (3), Paper No. 2250016, 15 pp., 2022.",
-      meta: "",
-      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
-      links: [{ label: "DOI", url: "https://doi.org/10.1142/S021821652250016X" }],
-    },
-    {
-      category: "accepted",
-      year: "",
-      title:
-        "A. Ishizeki & T. Nagasawa, The Möbius energy for knots and links, and wave maps, to appear in the 13th MSJ-JI Proceedings Differential Geometry and Integrable Systems.",
-      meta: "",
-      venue: lang === "jp" ? "受理済み・近刊" : "Accepted / forthcoming",
+      venue: lang === "jp" ? "プレプリント" : "Preprint",
     },
     {
       category: "accepted",
@@ -163,17 +90,99 @@ export default function App() {
       category: "accepted",
       year: "",
       title:
+        "A. Ishizeki & T. Nagasawa, The Möbius energy for knots and links, and wave maps, to appear in the 13th MSJ-JI Proceedings Differential Geometry and Integrable Systems.",
+      meta: "",
+      venue: lang === "jp" ? "受理済み・近刊" : "Accepted / forthcoming",
+    },
+    {
+      category: "accepted",
+      year: "",
+      title:
         "S. Blatt, A. Ishizeki & T. Nagasawa, A Möbius invariant discretization and decomposition of the Möbius energy, to appear in Saitama Math. J.",
       meta: "",
       venue: lang === "jp" ? "受理済み・近刊" : "Accepted / forthcoming",
     },
     {
-      category: "submitted",
-      year: "",
+      category: "refereed",
+      year: "2026",
       title:
-        "A. Ishizeki & T. Nagasawa, Direct expression of Möbius energies and their decomposition via the Gauss map, submitted.",
+        "A. Ishizeki & T. Nagasawa, Direct expressions of Möbius energies and their decomposition via the Gauss map, Kobe J. Math. 43, 19-39, 2026.",
       meta: "",
-      venue: lang === "jp" ? "投稿済み" : "Submitted",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.24546/0100505600" }],
+    },
+    {
+      category: "refereed",
+      year: "2022",
+      title:
+        "S. Blatt, A. Ishizeki & T. Nagasawa, A Möbius invariant discretization of O'Hara's Möbius energy, J. Knot Theory Ramifications 31 (3), Paper No. 2250016, 15 pp., 2022.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.1142/S021821652250016X" }],
+    },
+    {
+      category: "refereed",
+      year: "2021",
+      title:
+        "A. Ishizeki & T. Nagasawa, Decomposition of generalized O'Hara's energies, Math. Z. 298, 1049-1076, 2021.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.1007/s00209-020-02601-w" }],
+    },
+    {
+      category: "refereed",
+      year: "2021",
+      title:
+        "A. Ishizeki & T. Nagasawa, Upper and lower bounds and modulus of continuity of decomposed Möbius energies, J. Geom. Anal. 31, 5659-5686, 2021.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.1007/s12220-020-00496-x" }],
+    },
+    {
+      category: "refereed",
+      year: "2016",
+      title:
+        "A. Ishizeki & T. Nagasawa, The L2-gradient of decomposed Möbius energies, Calc. Var. Partial Differential Equations 55 (3), Art. 56, 31 pp., 2016.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.1007/s00526-016-0993-8" }],
+    },
+    {
+      category: "refereed",
+      year: "2016",
+      title:
+        "A. Ishizeki & T. Nagasawa, The invariance of decomposed Möbius energies under inversions with center on curves, J. Knot Theory Ramifications 25 (2), 1650009, 22 pp., 2016.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.1142/S0218216516500097" }],
+    },
+    {
+      category: "refereed",
+      year: "2015",
+      title:
+        "A. Ishizeki & T. Nagasawa, A decomposition theorem of the Möbius energy II: variational formulae and estimates, Math. Ann. 363 (1-2), 617-635, 2015.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.1007/s00208-015-1175-2" }],
+    },
+    {
+      category: "refereed",
+      year: "2014",
+      title:
+        "A. Ishizeki & T. Nagasawa, A decomposition theorem of the Möbius energy I: Decomposition and Möbius invariance, Kodai Math. J. 37 (3), 737-754, 2014.",
+      meta: "",
+      venue: lang === "jp" ? "査読付き論文" : "Refereed article",
+      links: [{ label: "DOI", url: "https://doi.org/10.2996/kmj/1414674619" }],
+    },
+    {
+      category: "thesis",
+      year: "2016",
+      title: "Decomposition of the Mobius energy: the Mobius invariance and variational formulae of decomposed energies",
+      meta:
+        lang === "jp"
+          ? "博士（理学）（埼玉大学）・取得年月日 2016年3月24日"
+          : "Ph.D. in Science, Saitama University, March 24, 2016",
+      venue: lang === "jp" ? "学位論文" : "Thesis",
     },
   ];
 
@@ -187,6 +196,16 @@ export default function App() {
               ? "さいたま数理解析セミナー『多成分絡み目に対するメビウスエネルギーとメビウス不変分解』"
               : 'Saitama Mathematical Analysis Seminar, "Möbius energies for multi-component links and their Möbius-invariant decompositions"',
           note: lang === "jp" ? "2026年3月28日・埼玉大学" : "March 28, 2026, Saitama University",
+        },
+        {
+          text:
+            lang === "jp"
+              ? "MATRIX–RIMS Tandem Workshop『A Möbius-Invariant Energy for Multi-Component Links via Relative Gauss Maps』"
+              : 'MATRIX–RIMS Tandem Workshop, "A Möbius-Invariant Energy for Multi-Component Links via Relative Gauss Maps"',
+          note:
+            lang === "jp"
+              ? "2026年9月17日・京都大学数理解析研究所"
+              : "September 17, 2026, RIMS, Kyoto University",
         },
       ],
     },
@@ -522,6 +541,7 @@ export default function App() {
        externalLinks: [
   { label: "researchmap", url: "https://researchmap.jp/aya-ishizeki" },
   { label: "Google Scholar", url: "https://scholar.google.com/citations?user=uDeaq1IAAAAJ" },
+  { label: "ORCID", url: "https://orcid.org/0009-0008-7250-575X" },
   { label: "教員紹介ページ", url: "https://www.rimath.saitama-u.ac.jp/staff/aishizeki/" },
 ],
       };
@@ -705,6 +725,7 @@ export default function App() {
      externalLinks: [
   { label: "researchmap", url: "https://researchmap.jp/aya-ishizeki" },
   { label: "Google Scholar", url: "https://scholar.google.com/citations?user=uDeaq1IAAAAJ" },
+  { label: "ORCID", url: "https://orcid.org/0009-0008-7250-575X" },
   { label: "University page", url: "https://www.rimath.saitama-u.ac.jp/staff/aishizeki/" },
 ],
     };
@@ -892,22 +913,26 @@ export default function App() {
   }
 
   function PapersPage() {
-    const thesis = papers.filter((paper) => paper.category === "thesis");
-    const refereed = papers.filter((paper) => paper.category === "refereed");
+    const preprints = papers
+      .filter((paper) => paper.category === "preprint")
+      .sort((a, b) => Number(b.year || 0) - Number(a.year || 0));
     const accepted = papers.filter((paper) => paper.category === "accepted");
-    const submitted = papers.filter((paper) => paper.category === "submitted");
+    const refereed = papers
+      .filter((paper) => paper.category === "refereed")
+      .sort((a, b) => Number(b.year || 0) - Number(a.year || 0));
+    const thesis = papers.filter((paper) => paper.category === "thesis");
 
     const sectionTitle = (kind: string) => {
       if (lang === "jp") {
-        if (kind === "thesis") return "１．学位論文";
-        if (kind === "refereed") return "２．査読付き論文";
-        if (kind === "accepted") return "３．受理済み・近刊";
-        return "４．投稿済み";
+        if (kind === "preprint") return "１．プレプリント";
+        if (kind === "accepted") return "２．受理済み・近刊";
+        if (kind === "refereed") return "３．査読付き論文";
+        return "４．学位論文";
       }
-      if (kind === "thesis") return "1. Thesis";
-      if (kind === "refereed") return "2. Refereed Articles";
-      if (kind === "accepted") return "3. Accepted / Forthcoming";
-      return "4. Submitted";
+      if (kind === "preprint") return "1. Preprints";
+      if (kind === "accepted") return "2. Accepted / Forthcoming";
+      if (kind === "refereed") return "3. Refereed Articles";
+      return "4. Thesis";
     };
 
     const PaperSection = ({ items, kind }: { items: PaperItem[]; kind: string }) => (
@@ -947,10 +972,10 @@ export default function App() {
       <section>
         <SectionHeader label="Papers" title={t.papersTitle} lead={t.papersLead} />
         <div className="space-y-6">
-          <PaperSection items={thesis} kind="thesis" />
-          <PaperSection items={refereed} kind="refereed" />
+          <PaperSection items={preprints} kind="preprint" />
           <PaperSection items={accepted} kind="accepted" />
-          <PaperSection items={submitted} kind="submitted" />
+          <PaperSection items={refereed} kind="refereed" />
+          <PaperSection items={thesis} kind="thesis" />
         </div>
       </section>
     );
